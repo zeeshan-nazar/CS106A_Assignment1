@@ -13,6 +13,7 @@ import stanford.karel.*;
 public class CollectNewspaperKarel extends SuperKarel {
 
 	// You fill in this part
+	// Added a comment
 	public void run(){
 		
 		move();
