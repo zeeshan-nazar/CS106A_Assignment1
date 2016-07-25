@@ -37,18 +37,16 @@ public class StoneMasonKarel extends SuperKarel {
 
 	// You fill in this part
 	public void run(){
-		turnLeft();
-		presentColumn();
-		turnRight();
+		
 		while(frontIsClear()){
+			turnLeft();
+			presentColumn();
+			turnRight();
 		jump4StepForNextColumn();
 		turnRight();
 		presentColumn();
 		turnLeft();
-		jump4StepForNextColumn();
-		turnLeft();
-		presentColumn();
-		turnRight();
+		
 		}
 		
 	}
