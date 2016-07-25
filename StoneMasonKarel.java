@@ -26,14 +26,20 @@ public class StoneMasonKarel extends SuperKarel {
 	  }
 	}
 	
+	public void jumpToNextColumn(){
+		for(int column=0;column<4;column++){
+			move();
+		}
+		
+	}
+	
 	
 
 	// You fill in this part
 	public void run(){
 		presentColumn();
-		while(frontIsClear()){
-		presentColumn();
-		}
+		turnRight();
+		jumpToNextColumn();
 	}
 	
 
