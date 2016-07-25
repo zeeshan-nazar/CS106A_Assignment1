@@ -14,7 +14,7 @@ public class StoneMasonKarel extends SuperKarel {
 	
 	
 	private void presentColumn(){
-		turnLeft();
+		
 		while (frontIsClear()){
 			if (noBeepersPresent()){
 				putBeeper();
@@ -26,7 +26,7 @@ public class StoneMasonKarel extends SuperKarel {
 	  }
 	}
 	
-	public void jumpToNextColumn(){
+	public void jump4StepForNextColumn(){
 		for(int column=0;column<4;column++){
 			move();
 		}
@@ -37,9 +37,20 @@ public class StoneMasonKarel extends SuperKarel {
 
 	// You fill in this part
 	public void run(){
+		turnLeft();
 		presentColumn();
 		turnRight();
-		jumpToNextColumn();
+		while(frontIsClear()){
+		jump4StepForNextColumn();
+		turnRight();
+		presentColumn();
+		turnLeft();
+		jump4StepForNextColumn();
+		turnLeft();
+		presentColumn();
+		turnRight();
+		}
+		
 	}
 	
 
