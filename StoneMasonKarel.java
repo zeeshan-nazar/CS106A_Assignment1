@@ -26,8 +26,16 @@ public class StoneMasonKarel extends SuperKarel {
 	  }
 	}
 	
-	public void jump4StepForNextColumn(){
+	private void jump4StepForNextColumn(){
 		for(int column=0;column<4;column++){
+			move();
+		}
+		
+	}
+	
+	private void turnBackToCurrentPosition(){
+		turnAround();
+		while(frontIsClear()){
 			move();
 		}
 		
@@ -41,13 +49,14 @@ public class StoneMasonKarel extends SuperKarel {
 		while(frontIsClear()){
 			turnLeft();
 			presentColumn();
-			turnRight();
-		jump4StepForNextColumn();
-		turnRight();
-		presentColumn();
-		turnLeft();
+			turnBackToCurrentPosition();
+			turnLeft();
+			jump4StepForNextColumn();
+			
 		
 		}
+		
+		
 		
 	}
 	
