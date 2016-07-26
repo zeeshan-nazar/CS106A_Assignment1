@@ -56,7 +56,10 @@ public class StoneMasonKarel extends SuperKarel {
 		
 		}
 		
-		
+		turnLeft();
+		presentColumn();
+		turnBackToCurrentPosition();
+		turnLeft();
 		
 	}
 	
