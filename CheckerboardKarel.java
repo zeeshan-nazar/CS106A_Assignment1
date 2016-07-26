@@ -40,9 +40,10 @@ public class CheckerboardKarel extends SuperKarel {
 	while(frontIsClear()){
 
 		puttingBeepersInRows();
-		
 
 		}
+
+		turnLeft();
 	
 	}
 
