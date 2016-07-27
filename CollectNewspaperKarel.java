@@ -18,8 +18,9 @@ public class CollectNewspaperKarel extends SuperKarel {
 		turnRight();
 		move();
 		turnLeft();
+		while(!beepersPresent()){
 		move();
-		move();
+		}
 	}
 	
 	private void collectNewsPeper(){
@@ -29,15 +30,15 @@ public class CollectNewspaperKarel extends SuperKarel {
 	}
 	
 	private void turnBackHome(){
-		turnRight();
-		turnRight();
+		turnAround();
+		while(frontIsClear()){
 		move();
+		} 
 		turnRight();
 		move();
 		turnLeft();
-		move();
-		move();
 		turnAround();
+		
 	}
 public void run(){
 		
